@@ -12,6 +12,7 @@ public class MainController {
 	private String operator = "";
 	private boolean start = true;
 	private Model model = new Model();
+	private Button btnClear = new Button();
 	
 	@FXML
 	public void processNumbers(ActionEvent event){
@@ -22,6 +23,16 @@ public class MainController {
 		
 		String value = ((Button)event.getSource()).getText();
 		result.setText(result.getText() + value);
+	}
+	
+	@FXML
+	public void processClear(ActionEvent event){
+		
+		
+			result.setText("");
+			start = false;
+		result.setText("");
+		
 	}
 	
 	@FXML
